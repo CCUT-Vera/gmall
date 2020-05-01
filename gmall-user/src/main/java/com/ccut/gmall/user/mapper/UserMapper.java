@@ -1,6 +1,6 @@
 package com.ccut.gmall.user.mapper;
 
-import com.ccut.gmall.user.bean.UmsMember;
+import com.ccut.gmall.bean.UmsMember;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
@@ -11,7 +11,8 @@ import java.util.List;
  */
 
 
-public interface UserMapper extends Mapper<UmsMember> {
+
+public interface UserMapper extends Mapper<UmsMember>{
 
     List<UmsMember> selectAllUser();
 

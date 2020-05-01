@@ -1,8 +1,7 @@
 package com.ccut.gmall.user.mapper;
 
-import com.ccut.gmall.user.bean.UmsMemberReceiveAddress;
+import com.ccut.gmall.bean.UmsMemberReceiveAddress;
 import tk.mybatis.mapper.common.Mapper;
-
 /**
  * @description:
  * @author: Sunwei
@@ -10,5 +9,5 @@ import tk.mybatis.mapper.common.Mapper;
  */
 
 
-public interface UmsMemberReceiveAddressMapper extends Mapper<UmsMemberReceiveAddress> {
+public interface UmsMemberReceiveAddressMapper extends Mapper<UmsMemberReceiveAddress>{
 }

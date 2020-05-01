@@ -1,8 +1,8 @@
 package com.ccut.gmall.user.controller;
 
-import com.ccut.gmall.user.bean.UmsMember;
-import com.ccut.gmall.user.bean.UmsMemberReceiveAddress;
-import com.ccut.gmall.user.service.UserService;
+import com.ccut.gmall.bean.UmsMember;
+import com.ccut.gmall.bean.UmsMemberReceiveAddress;
+import com.ccut.gmall.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +16,6 @@ import java.util.List;
  */
 
 
-
 @Controller
 public class UserController {
 
@@ -24,9 +23,10 @@ public class UserController {
     UserService userService;
 
     @RequestMapping("getReceiveAddressByMemberId")
-    @ResponseBody
     public List<UmsMemberReceiveAddress> getReceiveAddressByMemberId(String memberId){
+
         List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = userService.getReceiveAddressByMemberId(memberId);
+
         return umsMemberReceiveAddresses;
     }
 
@@ -34,7 +34,9 @@ public class UserController {
     @RequestMapping("getAllUser")
     @ResponseBody
     public List<UmsMember> getAllUser(){
+
         List<UmsMember> umsMembers = userService.getAllUser();
+
         return umsMembers;
     }
 

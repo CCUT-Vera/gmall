@@ -1,10 +1,11 @@
 package com.ccut.gmall.user.service.impl;
 
-import com.ccut.gmall.user.bean.UmsMember;
-import com.ccut.gmall.user.bean.UmsMemberReceiveAddress;
+import com.ccut.gmall.bean.UmsMember;
+import com.ccut.gmall.bean.UmsMemberReceiveAddress;
+import com.ccut.gmall.service.UserService;
+
 import com.ccut.gmall.user.mapper.UmsMemberReceiveAddressMapper;
 import com.ccut.gmall.user.mapper.UserMapper;
-import com.ccut.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ import java.util.List;
  * @author: Sunwei
  * @time: 2020/4/29 8:25 PM
  */
+
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -28,9 +30,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UmsMember> getAllUser() {
 
-        List<UmsMember> umsMemberList = userMapper.selectAll();//userMapper.selectAllUser();
+        List<UmsMember> umsMembers = userMapper.selectAll();//userMapper.selectAllUser();
 
-        return umsMemberList;
+        return umsMembers;
     }
 
     @Override
@@ -42,11 +44,10 @@ public class UserServiceImpl implements UserService {
         List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = umsMemberReceiveAddressMapper.select(umsMemberReceiveAddress);
 
 
-//        Example example = new Example(UmsMemberReceiveAddress.class);
-//        example.createCriteria().andEqualTo("memberId",memberId);
-//        List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = umsMemberReceiveAddressMapper.selectByExample(example);
+//       Example example = new Example(UmsMemberReceiveAddress.class);
+//       example.createCriteria().andEqualTo("memberId",memberId);
+//       List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = umsMemberReceiveAddressMapper.selectByExample(example);
 
         return umsMemberReceiveAddresses;
     }
 }
-
